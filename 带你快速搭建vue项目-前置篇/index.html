@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <h2>Java项目学习公众号，你学习的好帮手</h2>
+    <!--下面是插值表达式-->
+    <h2> {{classmate}} ，我爱你 </h2>
+  </div>
+  <!-- 引入Vue.js -->
+  <script src="js/vue.js"></script>
+  <script>
+    /* Vue的基本使用步骤：
+    * 1、需要提供标签用于填充数据
+    * 2、引入Vue.js文件
+    * 3、使用Vue的语法编写功能
+    * 4、把数据填充到标签里面
+    * */
+    const app = new Vue({
+      // el是元素（element）的缩写
+      el: '#app',
+      data: {
+        classmate: '小明',
+      }
+    })
+  </script>
+</body>
+</html>
