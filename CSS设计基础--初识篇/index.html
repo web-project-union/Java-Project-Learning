@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div class="back-ground">
+    <div>Java项目学习公众号，你学习的好帮手</div>
+    <!--换行-->
+    <div><br></div>
+    <!--下面是插值表达式-->
+    <div> {{classmate}} ，我爱你</div>
+    <!--换行-->
+    <div><br></div>
+    <!--行内样式,直接放在标签的 style 属性中，设置字体的颜色-->
+    <div style="color: mediumvioletred"> 我还是喜欢你</div>
+    <div style="color: mediumvioletred"> 像风走了八万里</div>
+    <div style="color: mediumvioletred"> 不问归期</div>
+    <!--换行-->
+    <div><br></div>
+    <!--内部样式，把样式代码放入<style>标签中-->
+    <div class="sweet"> 你的名字</div>
+    <div class="sweet"> 是我听过</div>
+    <div class="sweet"> 最短的情诗。</div>
+    <!--换行-->
+    <div><br></div>
+    <!--内部样式，把样式代码放入<style>标签中-->
+    <link href="love.css" rel="stylesheet" type="text/css">
+      <div class="hope">好希望</div>
+      <div class="hope">你说好想我</div>
+      <div class="hope">不是在梦里。</div>
+    </link>
+    <!--换行-->
+    <div><br></div>
+    <!--内部样式，把样式代码放入<style>标签中-->
+    <div class="miss">螃蟹在剥我的壳，笔记本在写我，</div>
+    <div class="miss">漫天的我落在枫叶上雪花上，</div>
+    <div class="miss">而你在想我。</div>
+  </div>
+</div>
+<!-- 引入Vue.js -->
+<script src="js/vue.js"></script>
+<script>
+  /* Vue的基本使用步骤：
+  * 1、需要提供标签用于填充数据
+  * 2、引入Vue.js文件
+  * 3、使用Vue的语法编写功能
+  * 4、把数据填充到标签里面
+  * */
+  const app = new Vue({
+    // el是元素（element）的缩写
+    el: '#app',
+    data() {
+      return {
+        classmate: '小明',
+      }
+    }
+  })
+</script>
+<style>
+    @import url(love.css);
+
+    .sweet {
+        color: red;
+    }
+
+    .back-ground {
+        background-color: aquamarine; /*背景颜色*/
+        width: 400px; /*宽度*/
+        border: solid 2px #ffa82f; /*边界*/
+        text-align: center; /*居中*/
+    }
+</style>
+</body>
+</html>
